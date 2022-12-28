@@ -3,7 +3,12 @@ guid: 0499448aff5807b48b8b9d25780bfe8b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Divani_Chester_nuovi_regency_mat1
+    second: {fileID: 2100000, guid: d598ef6f15fafab46a536b5bfbee3611, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
