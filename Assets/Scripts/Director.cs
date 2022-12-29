@@ -47,7 +47,7 @@ public class Director : MonoBehaviour
 
   private void Start()
   {
-    Display.displays[1].Activate();
+        Display.displays[1].Activate();
   }
 
   private void OnCameraSwitch(InputAction.CallbackContext context)
