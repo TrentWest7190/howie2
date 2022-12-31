@@ -12,6 +12,8 @@ public class Director : MonoBehaviour
   [SerializeField] private GameObject cameraManPrefab;
   [SerializeField] private GameObject cameraMenGO;
   [SerializeField] private CinemachineBrain brain;
+  [SerializeField] private CinemachineBlendDefinition.Style defaultBlendStyle;
+  [SerializeField] private CinemachineBlendDefinition.Style overrideBlendStyle;
   private Dictionary<int, GameObject> cameraMen;
   private InputAction cameraSwitchAction;
   private InputAction cutModeAction;
@@ -47,7 +49,8 @@ public class Director : MonoBehaviour
 
   private void Start()
   {
-        Display.displays[1].Activate();
+    Display.displays[1].Activate();
+    brain.m_DefaultBlend.m_Style = defaultBlendStyle;
   }
 
   private void OnCameraSwitch(InputAction.CallbackContext context)
@@ -61,7 +64,7 @@ public class Director : MonoBehaviour
         GameObject newCameraMan = Instantiate(cameraManPrefab, cameraMenGO.transform);
         cameraMen.Add(numKeyValue, newCameraMan);
         Camera directorCamera = newCameraMan.GetComponentInChildren<Camera>();
-        directorCamera.rect = new Rect((numKeyValue - 1) * 0.333f, 0, 0.333f, 0.333f);
+        directorCamera.rect = new Rect(((numKeyValue - 1) % 3) * 0.333f, Mathf.Floor((numKeyValue - 1) / 3) * 0.333f, 0.333f, 0.333f);
       }
       foreach (KeyValuePair<int, GameObject> _cameraMan in cameraMen)
       {
@@ -98,12 +101,12 @@ public class Director : MonoBehaviour
   {
     if (context.started)
     {
-      brain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.Cut;
+      brain.m_DefaultBlend.m_Style = overrideBlendStyle;
     }
 
     if (context.canceled)
     {
-      brain.m_DefaultBlend.m_Style = CinemachineBlendDefinition.Style.EaseInOut;
+      brain.m_DefaultBlend.m_Style = defaultBlendStyle;
     }
   }
 }

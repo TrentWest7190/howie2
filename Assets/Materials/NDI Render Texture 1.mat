@@ -47,7 +47,7 @@ Material:
     - _MainTex:
         m_Texture: {fileID: 8400000, guid: b043412965d8e17479216afa53434fa1, type: 2}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0.02, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -87,13 +87,13 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ColorCutoff: 0.2
-    - _ColorFeathering: 0.33
+    - _ColorCutoff: 0
+    - _ColorFeathering: 0.244
     - _ColorMode: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _Despill: 1
-    - _DespillLuminanceAdd: 0.2
+    - _DespillLuminanceAdd: 0.337
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
@@ -114,7 +114,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Sharpening: 0.5
+    - _Sharpening: 0.471
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 0
@@ -131,7 +131,7 @@ Material:
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _KeyColor: {r: 0, g: 1, b: 0, a: 0}
+    - _KeyColor: {r: 0.4686228, g: 0.8018868, b: 0.38203096, a: 0}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}

@@ -149,6 +149,7 @@ Library: lib_burst_generated
 --compilation-defines=CINEMACHINE_UNITY_IMGUI
 --compilation-defines=USING_PARTICLE_SYSTEM
 --compilation-defines=TIMELINE_FRAMEACCURATE
+--compilation-defines=KLAK_NDI_HAS_SRP
 --linker-options=PdbAltPath="Howie 2_Data/Plugins/x86_64"
 --generate-link-xml=Temp\burst.link.xml
 --output=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
@@ -163,6 +164,7 @@ Library: lib_burst_generated
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.Internal.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Burst.dll
+--root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Cinemachine.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
@@ -173,10 +175,10 @@ Library: lib_burst_generated
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
+--root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Klak.Ndi.Runtime.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\EasyCharacterMovement.CharacterMovement.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.ProBuilder.KdTree.dll
---root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
@@ -353,6 +355,7 @@ Library: lib_burst_generated
 --compilation-defines=CINEMACHINE_UNITY_IMGUI
 --compilation-defines=USING_PARTICLE_SYSTEM
 --compilation-defines=TIMELINE_FRAMEACCURATE
+--compilation-defines=KLAK_NDI_HAS_SRP
 --linker-options=PdbAltPath="Howie 2_Data/Plugins/x86_64"
 --generate-link-xml=Temp\burst.link.xml
 --output=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
@@ -367,6 +370,7 @@ Library: lib_burst_generated
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.Internal.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Burst.dll
+--root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Cinemachine.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
@@ -377,10 +381,10 @@ Library: lib_burst_generated
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
+--root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Klak.Ndi.Runtime.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\EasyCharacterMovement.CharacterMovement.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.ProBuilder.KdTree.dll
---root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --root-assembly=D:\GameDev\Unity\Howie 2\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll

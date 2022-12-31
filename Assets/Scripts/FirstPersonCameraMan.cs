@@ -12,6 +12,7 @@ public class FirstPersonCameraMan : FirstPersonCharacter
   protected InputAction resetZoomAction { get; set; }
 
   private CinemachineVirtualCamera _vCam;
+  private Camera _previewCam;
   private float initialFOV;
   private float initialDutch;
 
@@ -36,6 +37,17 @@ public class FirstPersonCameraMan : FirstPersonCharacter
         _vCam = GetComponentInChildren<CinemachineVirtualCamera>();
 
       return _vCam;
+    }
+  }
+
+  protected Camera previewCamera
+  {
+    get
+    {
+      if (_previewCam == null)
+        _previewCam = GetComponentInChildren<Camera>();
+
+      return _previewCam;
     }
   }
 
@@ -83,7 +95,10 @@ public class FirstPersonCameraMan : FirstPersonCharacter
     if (context.started)
     {
       vCam.m_Lens.FieldOfView = initialFOV;
+      previewCamera.fieldOfView = vCam.m_Lens.FieldOfView;
       vCam.m_Lens.Dutch = initialDutch;
+      Vector3 eulerRotation = previewCamera.transform.rotation.eulerAngles;
+      previewCamera.transform.rotation = Quaternion.Euler(eulerRotation.x, eulerRotation.y, vCam.m_Lens.Dutch);
     }
   }
 
@@ -105,7 +120,10 @@ public class FirstPersonCameraMan : FirstPersonCharacter
     {
       Vector2 mouseLookInput = GetMouseLookInput();
       vCam.m_Lens.FieldOfView -= mouseLookInput.y * zoomSensitivity;
+      previewCamera.fieldOfView = vCam.m_Lens.FieldOfView;
       vCam.m_Lens.Dutch -= mouseLookInput.x * zoomSensitivity;
+      Vector3 eulerRotation = previewCamera.transform.rotation.eulerAngles;
+      previewCamera.transform.rotation = Quaternion.Euler(eulerRotation.x, eulerRotation.y, vCam.m_Lens.Dutch);
     }
 
     if (jumpButtonPressed)
