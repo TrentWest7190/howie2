@@ -15,6 +15,7 @@ public class FirstPersonCameraMan : FirstPersonCharacter
   private Camera _previewCam;
   private float initialFOV;
   private float initialDutch;
+  public bool isActiveCamera = false;
 
   protected override void OnAwake()
   {
@@ -75,6 +76,7 @@ public class FirstPersonCameraMan : FirstPersonCharacter
 
   protected void OnZoom(InputAction.CallbackContext context)
   {
+    if (!isActiveCamera) return;
     if (context.started)
     {
       Debug.Log("Zoom started");
@@ -116,7 +118,7 @@ public class FirstPersonCameraMan : FirstPersonCharacter
     movementDirection += GetEyeForwardVector() * movementInput.y;
     movementDirection += GetRightVector() * movementInput.x;
 
-    if (_isZooming)
+    if (_isZooming && isActiveCamera)
     {
       Vector2 mouseLookInput = GetMouseLookInput();
       vCam.m_Lens.FieldOfView -= mouseLookInput.y * zoomSensitivity;

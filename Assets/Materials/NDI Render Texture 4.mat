@@ -26,7 +26,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorCutoff: 0
+    - _ColorCutoff: 0.517
     - _ColorFeathering: 0.33
     - _Despill: 1
     - _DespillLuminanceAdd: 0.2

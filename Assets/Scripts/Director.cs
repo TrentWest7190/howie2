@@ -73,11 +73,14 @@ public class Director : MonoBehaviour
         Image recIndicator = _cameraMan.Value.GetComponentInChildren<Image>();
         vCam.enabled = false;
         cameraManComponent.SetMovementMode(EasyCharacterMovement.MovementMode.None);
+        cameraManComponent.GetComponent<FirstPersonCameraMan>().isActiveCamera = false;
         recIndicator.enabled = false;
       }
       cameraMen[numKeyValue].GetComponentInChildren<CinemachineVirtualCamera>().enabled = true;
       cameraMen[numKeyValue].GetComponent<FirstPersonCameraMan>().SetMovementMode(EasyCharacterMovement.MovementMode.Flying);
+      cameraMen[numKeyValue].GetComponent<FirstPersonCameraMan>().isActiveCamera = true;
       cameraMen[numKeyValue].GetComponentInChildren<Image>().enabled = true;
+
     }
   }
 
@@ -90,10 +93,12 @@ public class Director : MonoBehaviour
       Image recIndicator = _cameraMan.Value.GetComponentInChildren<Image>();
       vCam.enabled = false;
       cameraManComponent.SetMovementMode(EasyCharacterMovement.MovementMode.None);
+      cameraManComponent.isActiveCamera = false;
       recIndicator.enabled = false;
     }
     cameraPrefab.GetComponentInChildren<CinemachineVirtualCamera>().enabled = true;
     cameraPrefab.GetComponent<FirstPersonCameraMan>().SetMovementMode(EasyCharacterMovement.MovementMode.Flying);
+    cameraPrefab.GetComponent<FirstPersonCameraMan>().isActiveCamera = true;
     cameraPrefab.GetComponentInChildren<Image>().enabled = true;
   }
 
