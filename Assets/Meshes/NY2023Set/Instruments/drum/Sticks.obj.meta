@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: af1e8d93c1b4f7a4aa18ad98d7d7b60f
+guid: af860d78c148b4841abdda2049d2e530
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mt_tuba01
-    second: {fileID: 2100000, guid: bfa03562ddd148746971550b3abaec95, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
