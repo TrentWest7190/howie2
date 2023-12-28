@@ -18,6 +18,8 @@ public class NY2023Manager : MonoBehaviour
     public GameObject rock;
     public GameObject[] effects;
 
+    public GameObject[] bandInstruments;
+
     private void Start()
     {
      
@@ -40,6 +42,15 @@ public class NY2023Manager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             var glassb = Instantiate(effects[0], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+        }
+        //spawn something atop the stage
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            foreach(var instrument in bandInstruments)
+            {
+                var instrumentAnimator = instrument.GetComponent<Animator>();
+                instrumentAnimator.SetBool("isPlaying", !instrumentAnimator.GetBool("isPlaying"));
+            }
         }
     }
 
