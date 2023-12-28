@@ -1,0 +1,64 @@
+newmtl bottom
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka bottom.png
+map_Kd bottom.png
+map_d bottom.png
+newmtl gate
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka gate.png
+map_Kd gate.png
+map_d gate.png
+newmtl okup_steam
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka okup_steam.png
+map_Kd okup_steam.png
+map_d okup_steam.png
+newmtl okupipe
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka okupipe.png
+map_Kd okupipe.png
+map_d okupipe.png
+newmtl wall01a
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka wall01a.png
+map_Kd wall01a.png
+map_d wall01a.png
+newmtl wall02a
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka wall02a.png
+map_Kd wall02a.png
+map_d wall02a.png
+newmtl wall03a
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka wall03a.png
+map_Kd wall03a.png
+map_d wall03a.png
+newmtl z2_b_g
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka z2_b_g.png
+map_Kd z2_b_g.png
+map_d z2_b_g.png

@@ -1,0 +1,264 @@
+newmtl Def158
+Ka 0.5019608 0.5019608 0.5019608
+Kd 0.6901961 0.6901961 0.6901961
+d 1
+Tr 1
+map_Ka Def158.png
+map_Kd Def158.png
+map_d Def158.png
+newmtl Def160
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka Def160.png
+map_Kd Def160.png
+map_d Def160.png
+newmtl Def18
+Ka 0.5019608 0.5019608 0.5019608
+Kd 0.6901961 0.6901961 0.6901961
+d 1
+Tr 1
+map_Ka Def18.png
+map_Kd Def18.png
+map_d Def18.png
+newmtl Def7
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka Def7.png
+map_Kd Def7.png
+map_d Def7.png
+newmtl Def8
+Ka 0 0 0
+Kd 0 0 0
+d 1
+Tr 1
+map_Ka Def8.png
+map_Kd Def8.png
+map_d Def8.png
+newmtl mat100
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat100.png
+map_Kd mat100.png
+map_d mat100.png
+newmtl mat101
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat101.png
+map_Kd mat101.png
+map_d mat101.png
+newmtl mat102
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat102.png
+map_Kd mat102.png
+map_d mat102.png
+newmtl mat103
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat103.png
+map_Kd mat103.png
+map_d mat103.png
+newmtl mat105
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat105.png
+map_Kd mat105.png
+map_d mat105.png
+newmtl mat106
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat106.png
+map_Kd mat106.png
+map_d mat106.png
+newmtl mat107
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat107.png
+map_Kd mat107.png
+map_d mat107.png
+newmtl mat110
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat110.png
+map_Kd mat110.png
+map_d mat110.png
+newmtl mat111
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat111.png
+map_Kd mat111.png
+map_d mat111.png
+newmtl mat113
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat113.png
+map_Kd mat113.png
+map_d mat113.png
+newmtl mat114
+Ka 0.5019608 0.5019608 0.5019608
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat114.png
+map_Kd mat114.png
+map_d mat114.png
+newmtl mat12
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat12.png
+map_Kd mat12.png
+map_d mat12.png
+newmtl mat121
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat121.png
+map_Kd mat121.png
+map_d mat121.png
+newmtl mat123
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat123.png
+map_Kd mat123.png
+map_d mat123.png
+newmtl mat124
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat124.png
+map_Kd mat124.png
+map_d mat124.png
+newmtl mat13
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat13.png
+map_Kd mat13.png
+map_d mat13.png
+newmtl mat139
+Ka 0 0 0
+Kd 0.8470588 0.8470588 0.8470588
+d 1
+Tr 1
+map_Ka mat139.png
+map_Kd mat139.png
+map_d mat139.png
+newmtl mat149
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat149.png
+map_Kd mat149.png
+map_d mat149.png
+newmtl mat150
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat150.png
+map_Kd mat150.png
+map_d mat150.png
+newmtl mat154
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat154.png
+map_Kd mat154.png
+map_d mat154.png
+newmtl mat155
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat155.png
+map_Kd mat155.png
+map_d mat155.png
+newmtl mat163
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat163.png
+map_Kd mat163.png
+map_d mat163.png
+newmtl mat165
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat165.png
+map_Kd mat165.png
+map_d mat165.png
+newmtl mat169
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat169.png
+map_Kd mat169.png
+map_d mat169.png
+newmtl mat171
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat171.png
+map_Kd mat171.png
+map_d mat171.png
+newmtl mat3
+Ka 0.5019608 0.5019608 0.5019608
+Kd 0.6901961 0.6901961 0.6901961
+d 1
+Tr 1
+map_Ka mat3.png
+map_Kd mat3.png
+map_d mat3.png
+newmtl mat4
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat4.png
+map_Kd mat4.png
+map_d mat4.png
+newmtl mat99
+Ka 0 0 0
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mat99.png
+map_Kd mat99.png
+map_d mat99.png

@@ -1,0 +1,96 @@
+newmtl da
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka da.png
+map_Kd da.png
+map_d da.png
+newmtl dai_foot
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka dai_foot.png
+map_Kd dai_foot.png
+map_d dai_foot.png
+newmtl dai_sideA
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka dai_sideA.png
+map_Kd dai_sideA.png
+map_d dai_sideA.png
+newmtl dai_sideB
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka dai_sideB.png
+map_Kd dai_sideB.png
+map_d dai_sideB.png
+newmtl dai_top
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka dai_top.png
+map_Kd dai_top.png
+map_d dai_top.png
+newmtl db
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka db.png
+map_Kd db.png
+map_d db.png
+newmtl dc
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka dc.png
+map_Kd dc.png
+map_d dc.png
+newmtl dd
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka dd.png
+map_Kd dd.png
+map_d dd.png
+newmtl de
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka de.png
+map_Kd de.png
+map_d de.png
+newmtl df
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka df.png
+map_Kd df.png
+map_d df.png
+newmtl mesh
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka mesh.png
+map_Kd mesh.png
+map_d mesh.png
+newmtl plate
+Ka 0.282353 0.282353 0.282353
+Kd 0.972549 0.972549 0.972549
+d 1
+Tr 1
+map_Ka plate.png
+map_Kd plate.png
+map_d plate.png
