@@ -9,10 +9,12 @@ using Cinemachine;
 public class NY2023Manager : MonoBehaviour
 {
     public GameObject scorpyObj;
+    public GameObject scorpyPlane;
     public GameObject scorpySpawner;
     public GameObject scorpyProjectileSpawner;
 
     public GameObject wayneObj;
+    public GameObject waynePlane;
     public GameObject wayneSpawner;
     public GameObject wayneProjectileSpawner;
 
@@ -27,6 +29,8 @@ public class NY2023Manager : MonoBehaviour
     public GameObject demon;
     public GameObject projectileEffect;
     public GameObject defaultProjectileTarget;
+    public GameObject spawnEffect;
+
 
     public GameObject[] bandInstruments;
 
@@ -98,7 +102,7 @@ public class NY2023Manager : MonoBehaviour
         {
             var demon = GameObject.FindGameObjectWithTag("Enemy");
 
-            if (scorpyObj.activeSelf)
+            if (scorpyObj.transform.GetChild(0).gameObject.activeSelf)
             {
                 var projectile = Instantiate(projectileEffect, scorpyProjectileSpawner.transform.position, new Quaternion(180, 100, 180, 180));
                 projectile.transform.LookAt(defaultProjectileTarget.transform);
@@ -107,7 +111,7 @@ public class NY2023Manager : MonoBehaviour
                     projectile.transform.LookAt(demon.transform.GetChild(2));
             }
 
-            if (wayneObj.activeSelf)
+            if (wayneObj.transform.GetChild(0).gameObject.activeSelf)
             {
                 var projectileW = Instantiate(projectileEffect, wayneProjectileSpawner.transform.position, new Quaternion(180, 100, 180, 180));
                 projectileW.transform.LookAt(defaultProjectileTarget.transform);
@@ -115,6 +119,20 @@ public class NY2023Manager : MonoBehaviour
                 if (demon != null)
                     projectileW.transform.LookAt(demon.transform.GetChild(2));
             }
+        }
+
+        //toggle visibility of scorpy
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            scorpyPlane.SetActive(!scorpyPlane.activeSelf);
+            Instantiate(spawnEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
+        }
+
+        //toggle visibility of wayne
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            waynePlane.SetActive(!waynePlane.activeSelf);
+            Instantiate(spawnEffect, wayneSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
     }
 

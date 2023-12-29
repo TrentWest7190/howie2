@@ -17546,9 +17546,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scorpyObj: {fileID: 708737343}
+  scorpyPlane: {fileID: 2904585628307026500}
   scorpySpawner: {fileID: 857691560}
   scorpyProjectileSpawner: {fileID: 951170258}
   wayneObj: {fileID: 1498217709}
+  waynePlane: {fileID: 2904585627457804212}
   wayneSpawner: {fileID: 2069888012}
   wayneProjectileSpawner: {fileID: 927344422}
   pipeSpawner: {fileID: 1821238500}
@@ -17573,6 +17575,7 @@ MonoBehaviour:
   projectileEffect: {fileID: 1979527227019656, guid: b780c48924835834894c395fe01f19c1,
     type: 3}
   defaultProjectileTarget: {fileID: 1964075556}
+  spawnEffect: {fileID: 167990, guid: acf6b6d80ce16b547854e02ed4c7565f, type: 3}
   bandInstruments:
   - {fileID: 887910697}
   - {fileID: 528682438}
