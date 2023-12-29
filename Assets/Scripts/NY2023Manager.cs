@@ -10,8 +10,12 @@ public class NY2023Manager : MonoBehaviour
 {
     public GameObject scorpyObj;
     public GameObject scorpySpawner;
+    public GameObject scorpyProjectileSpawner;
+
     public GameObject wayneObj;
     public GameObject wayneSpawner;
+    public GameObject wayneProjectileSpawner;
+
     public GameObject pipeSpawner;
     public GameObject stageSpawner;
     public GameObject aboveStageSpawner;
@@ -21,6 +25,8 @@ public class NY2023Manager : MonoBehaviour
     public GameObject endingEffect;
     public GameObject endingScorb;
     public GameObject demon;
+    public GameObject projectileEffect;
+    public GameObject defaultProjectileTarget;
 
     public GameObject[] bandInstruments;
 
@@ -86,6 +92,29 @@ public class NY2023Manager : MonoBehaviour
             endingSequence = true;
             endingScorb.GetComponent<Animator>().SetTrigger("ending");
             Instantiate(rock, scorbSpawner.transform.position, new Quaternion(0, 100, 0, 0));
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            var demon = GameObject.FindGameObjectWithTag("Enemy");
+
+            if (scorpyObj.activeSelf)
+            {
+                var projectile = Instantiate(projectileEffect, scorpyProjectileSpawner.transform.position, new Quaternion(180, 100, 180, 180));
+                projectile.transform.LookAt(defaultProjectileTarget.transform);
+
+                if (demon != null)
+                    projectile.transform.LookAt(demon.transform.GetChild(2));
+            }
+
+            if (wayneObj.activeSelf)
+            {
+                var projectileW = Instantiate(projectileEffect, wayneProjectileSpawner.transform.position, new Quaternion(180, 100, 180, 180));
+                projectileW.transform.LookAt(defaultProjectileTarget.transform);
+
+                if (demon != null)
+                    projectileW.transform.LookAt(demon.transform.GetChild(2));
+            }
         }
     }
 
