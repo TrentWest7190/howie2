@@ -17526,6 +17526,7 @@ MonoBehaviour:
   - {fileID: 103234, guid: 62b391571386ff84fa0c07bcf7516b7e, type: 3}
   endingEffect: {fileID: 141900, guid: 5bc08332c48399b4fb3720836935d6ae, type: 3}
   endingScorb: {fileID: 1276647861}
+  demon: {fileID: 4945749433250219283, guid: 0122b98343a4df34d8520a690837054f, type: 3}
   bandInstruments:
   - {fileID: 887910697}
   - {fileID: 528682438}

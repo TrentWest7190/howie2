@@ -20,6 +20,7 @@ public class NY2023Manager : MonoBehaviour
     public GameObject[] effects;
     public GameObject endingEffect;
     public GameObject endingScorb;
+    public GameObject demon;
 
     public GameObject[] bandInstruments;
 
@@ -71,6 +72,12 @@ public class NY2023Manager : MonoBehaviour
                 var instrumentAnimator = instrument.GetComponent<Animator>();
                 instrumentAnimator.SetBool("isPlaying", !instrumentAnimator.GetBool("isPlaying"));
             }
+        }
+
+        //spawn something atop the stage
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            var glassb = Instantiate(demon);
         }
 
         //ending sequence
