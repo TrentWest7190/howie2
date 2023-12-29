@@ -17601,13 +17601,19 @@ MonoBehaviour:
   - {fileID: 195834, guid: 88dfa986f2cbd1b49be7b927c0f51e08, type: 3}
   - {fileID: 103234, guid: 62b391571386ff84fa0c07bcf7516b7e, type: 3}
   endingEffect: {fileID: 141900, guid: 5bc08332c48399b4fb3720836935d6ae, type: 3}
-  endingScorb: {fileID: 1276647861}
-  demon: {fileID: 4945749433250219283, guid: 0122b98343a4df34d8520a690837054f, type: 3}
   projectileEffect: {fileID: 1979527227019656, guid: b780c48924835834894c395fe01f19c1,
     type: 3}
   defaultProjectileTarget: {fileID: 1964075556}
   spawnEffect: {fileID: 167990, guid: acf6b6d80ce16b547854e02ed4c7565f, type: 3}
-  teleportEffect: {fileID: 0}
+  teleportEffect: {fileID: 1520786051656894, guid: 0c470fa573dfa9045ae999d61d84f9f8,
+    type: 3}
+  endingScorb: {fileID: 1276647861}
+  demon: {fileID: 4945749433250219283, guid: 0122b98343a4df34d8520a690837054f, type: 3}
+  gems:
+  - {fileID: 5067209548081438962, guid: 776c4a75ffcf6e74d84824e65455f192, type: 3}
+  - {fileID: 5067209548081438962, guid: b802abd55780f4747aba9cda0b7566a8, type: 3}
+  - {fileID: 5067209548081438962, guid: 6648bfb8b8f04d148a62d5539420453d, type: 3}
+  - {fileID: 5067209548081438962, guid: a2bb0fd624b7047489ce5d22ba6e2ae5, type: 3}
   bandInstruments:
   - {fileID: 887910697}
   - {fileID: 528682438}

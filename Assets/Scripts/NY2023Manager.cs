@@ -25,15 +25,19 @@ public class NY2023Manager : MonoBehaviour
     public GameObject stageSpawner;
     public GameObject aboveStageSpawner;
     public GameObject scorbSpawner;
+
     public GameObject rock;
     public GameObject[] effects;
     public GameObject endingEffect;
-    public GameObject endingScorb;
-    public GameObject demon;
     public GameObject projectileEffect;
     public GameObject defaultProjectileTarget;
     public GameObject spawnEffect;
     public GameObject teleportEffect;
+
+    public GameObject endingScorb;
+    public GameObject demon;
+
+    public GameObject[] gems;
 
 
     public GameObject[] bandInstruments;
@@ -65,20 +69,16 @@ public class NY2023Manager : MonoBehaviour
         //spawn a rock effect thing to test
         if (Input.GetKeyDown(KeyCode.T))
         {
-            //we can improve this eventually by deleting previous instances of this before spawning one but w/e for now
-            var glassb = Instantiate(rock, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            var effect = Instantiate(rock, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
-        //spawn something out the pipe
+
+        //spawn a random effect out the pipe
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            var glassb = Instantiate(effects[RandomNumber(0, 9)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            var effect = Instantiate(effects[RandomNumber(0, 9)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
-        //spawn something atop the stage
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            var glassb = Instantiate(effects[RandomNumber(0, 9)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
-        }
-        //spawn something atop the stage
+
+        //toggle instrument animation
         if (Input.GetKeyDown(KeyCode.I))
         {
             foreach(var instrument in bandInstruments)
@@ -88,7 +88,7 @@ public class NY2023Manager : MonoBehaviour
             }
         }
 
-        //spawn something atop the stage
+        //spawn a demon
         if (Input.GetKeyDown(KeyCode.P))
         {
             var glassb = Instantiate(demon);
@@ -148,12 +148,14 @@ public class NY2023Manager : MonoBehaviour
         //toggle scorpy teleport 1
         if (Input.GetKeyDown(KeyCode.Keypad2))
         {
+            Instantiate(teleportEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
             scorpyObj.GetComponent<Animator>().SetBool("Teleport1", true);
         }
 
         //toggle scorpy idle position
         if (Input.GetKeyDown(KeyCode.Keypad0))
         {
+            Instantiate(teleportEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
             scorpyObj.GetComponent<Animator>().SetBool("Teleport1", false);
             scorpyObj.GetComponent<Animator>().SetBool("Teleport2", false);
         }
@@ -161,6 +163,7 @@ public class NY2023Manager : MonoBehaviour
         //toggle scorpy teleport 1
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
+            Instantiate(teleportEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
             scorpyObj.GetComponent<Animator>().SetBool("Teleport2", true);
         }
 
@@ -175,6 +178,12 @@ public class NY2023Manager : MonoBehaviour
         {
             baaulpObj.GetComponent<Animator>().SetTrigger("Exit");
             Instantiate(baaulpBed);
+        }
+
+        //spawn a random effect out the pipe
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            var effect = Instantiate(gems[RandomNumber(0, 3)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
     }
 
