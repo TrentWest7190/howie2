@@ -18,6 +18,9 @@ public class NY2023Manager : MonoBehaviour
     public GameObject wayneSpawner;
     public GameObject wayneProjectileSpawner;
 
+    public GameObject baaulpObj;
+    public GameObject baaulpBed;
+
     public GameObject pipeSpawner;
     public GameObject stageSpawner;
     public GameObject aboveStageSpawner;
@@ -30,6 +33,7 @@ public class NY2023Manager : MonoBehaviour
     public GameObject projectileEffect;
     public GameObject defaultProjectileTarget;
     public GameObject spawnEffect;
+    public GameObject teleportEffect;
 
 
     public GameObject[] bandInstruments;
@@ -91,7 +95,7 @@ public class NY2023Manager : MonoBehaviour
         }
 
         //ending sequence
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.Keypad9))
         {
             endingSequence = true;
             endingScorb.GetComponent<Animator>().SetTrigger("ending");
@@ -122,17 +126,55 @@ public class NY2023Manager : MonoBehaviour
         }
 
         //toggle visibility of scorpy
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.Keypad8))
         {
             scorpyPlane.SetActive(!scorpyPlane.activeSelf);
             Instantiate(spawnEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
 
         //toggle visibility of wayne
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Keypad7))
         {
             waynePlane.SetActive(!waynePlane.activeSelf);
             Instantiate(spawnEffect, wayneSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+        }
+
+        //toggle scorpy entrance
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            scorpyObj.GetComponent<Animator>().SetTrigger("Enter");
+        }
+
+        //toggle scorpy teleport 1
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            scorpyObj.GetComponent<Animator>().SetBool("Teleport1", true);
+        }
+
+        //toggle scorpy idle position
+        if (Input.GetKeyDown(KeyCode.Keypad0))
+        {
+            scorpyObj.GetComponent<Animator>().SetBool("Teleport1", false);
+            scorpyObj.GetComponent<Animator>().SetBool("Teleport2", false);
+        }
+
+        //toggle scorpy teleport 1
+        if (Input.GetKeyDown(KeyCode.Keypad3))
+        {
+            scorpyObj.GetComponent<Animator>().SetBool("Teleport2", true);
+        }
+
+        //toggle baaulp entrance
+        if (Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            baaulpObj.GetComponent<Animator>().SetTrigger("Enter");
+        }
+
+        //toggle baaulp exit
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            baaulpObj.GetComponent<Animator>().SetTrigger("Exit");
+            Instantiate(baaulpBed);
         }
     }
 

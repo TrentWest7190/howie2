@@ -330,7 +330,7 @@ MonoBehaviour:
     m_Value: 1
   bleedAmount:
     m_OverrideState: 1
-    m_Value: 0.67
+    m_Value: 0.72
   bleedDebug:
     m_OverrideState: 1
     m_Value: 0
