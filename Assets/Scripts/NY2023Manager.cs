@@ -38,7 +38,7 @@ public class NY2023Manager : MonoBehaviour
     public GameObject demon;
 
     public GameObject[] gems;
-
+    public GameObject trophy;
 
     public GameObject[] bandInstruments;
 
@@ -67,19 +67,19 @@ public class NY2023Manager : MonoBehaviour
         }
 
         //spawn a rock effect thing to test
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.End))
         {
             var effect = Instantiate(rock, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
 
         //spawn a random effect out the pipe
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Home))
         {
             var effect = Instantiate(effects[RandomNumber(0, 9)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
 
         //toggle instrument animation
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.KeypadDivide))
         {
             foreach(var instrument in bandInstruments)
             {
@@ -89,7 +89,7 @@ public class NY2023Manager : MonoBehaviour
         }
 
         //spawn a demon
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.KeypadMinus))
         {
             var glassb = Instantiate(demon);
         }
@@ -102,7 +102,7 @@ public class NY2023Manager : MonoBehaviour
             Instantiate(rock, scorbSpawner.transform.position, new Quaternion(0, 100, 0, 0));
         }
 
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.KeypadMultiply))
         {
             var demon = GameObject.FindGameObjectWithTag("Enemy");
 
@@ -160,7 +160,7 @@ public class NY2023Manager : MonoBehaviour
             scorpyObj.GetComponent<Animator>().SetBool("Teleport2", false);
         }
 
-        //toggle scorpy teleport 1
+        //toggle scorpy teleport 2
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
             Instantiate(teleportEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
@@ -180,11 +180,25 @@ public class NY2023Manager : MonoBehaviour
             Instantiate(baaulpBed);
         }
 
-        //spawn a random effect out the pipe
-        if (Input.GetKeyDown(KeyCode.M))
+        //toggle wayne entrance
+        if (Input.GetKeyDown(KeyCode.Keypad6))
+        {
+            wayneObj.GetComponent<Animator>().SetTrigger("Enter");
+        }
+
+        //spawn a random gem
+        if (Input.GetKeyDown(KeyCode.KeypadPlus))
         {
             var effect = Instantiate(gems[RandomNumber(0, 3)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
+
+        //spawn trophy
+        if (Input.GetKeyDown(KeyCode.PageUp))
+        {
+            var trophyStatus = trophy.GetComponent<Animator>().GetBool("Appear");
+            trophy.GetComponent<Animator>().SetBool("Appear", !trophyStatus);
+        }
+
     }
 
     private int RandomNumber(int lowerNum = 1, int higherNum = 2000)
