@@ -15,10 +15,16 @@ public class NY2023Manager : MonoBehaviour
     public GameObject pipeSpawner;
     public GameObject stageSpawner;
     public GameObject aboveStageSpawner;
+    public GameObject scorbSpawner;
     public GameObject rock;
     public GameObject[] effects;
+    public GameObject endingEffect;
+    public GameObject endingScorb;
 
     public GameObject[] bandInstruments;
+
+    private bool endingSequence = false;
+    private float endingTimer;
 
     private void Start()
     {
@@ -27,6 +33,20 @@ public class NY2023Manager : MonoBehaviour
 
     private void Update()
     {
+        if (endingSequence)
+        {
+            if (endingTimer >= 10f)
+            {
+                Instantiate(endingEffect, stageSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+                Instantiate(endingEffect, stageSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+                endingSequence = false;
+            }
+            else
+            {
+                endingTimer += Time.deltaTime;
+            }
+        }
+
         //spawn a rock effect thing to test
         if (Input.GetKeyDown(KeyCode.T))
         {
@@ -36,12 +56,12 @@ public class NY2023Manager : MonoBehaviour
         //spawn something out the pipe
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            var glassb = Instantiate(effects[0], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            var glassb = Instantiate(effects[RandomNumber(0, 9)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
         //spawn something atop the stage
         if (Input.GetKeyDown(KeyCode.U))
         {
-            var glassb = Instantiate(effects[0], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            var glassb = Instantiate(effects[RandomNumber(0, 9)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
         //spawn something atop the stage
         if (Input.GetKeyDown(KeyCode.I))
@@ -52,11 +72,19 @@ public class NY2023Manager : MonoBehaviour
                 instrumentAnimator.SetBool("isPlaying", !instrumentAnimator.GetBool("isPlaying"));
             }
         }
+
+        //ending sequence
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            endingSequence = true;
+            endingScorb.GetComponent<Animator>().SetTrigger("ending");
+            Instantiate(rock, scorbSpawner.transform.position, new Quaternion(0, 100, 0, 0));
+        }
     }
 
-    private string RandomNumber()
+    private int RandomNumber(int lowerNum = 1, int higherNum = 2000)
     {
         System.Random rand = new System.Random();
-        return rand.Next(1, 2000).ToString();
+        return rand.Next(lowerNum, higherNum);
     }
 }
