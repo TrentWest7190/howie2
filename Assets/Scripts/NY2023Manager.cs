@@ -68,7 +68,7 @@ public class NY2023Manager : MonoBehaviour
         }
 
         //spawn an electricity effect on me and wayne
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             Instantiate(electricityEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
             Instantiate(electricityEffect, wayneSpawner.transform.position, new Quaternion(0, 0, 0, 0));
