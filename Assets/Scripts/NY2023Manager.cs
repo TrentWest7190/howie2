@@ -25,8 +25,9 @@ public class NY2023Manager : MonoBehaviour
     public GameObject stageSpawner;
     public GameObject aboveStageSpawner;
     public GameObject scorbSpawner;
+    public GameObject gemSpawner;
 
-    public GameObject rock;
+    public GameObject electricityEffect;
     public GameObject[] effects;
     public GameObject endingEffect;
     public GameObject projectileEffect;
@@ -66,16 +67,17 @@ public class NY2023Manager : MonoBehaviour
             }
         }
 
-        //spawn a rock effect thing to test
-        if (Input.GetKeyDown(KeyCode.End))
+        //spawn an electricity effect on me and wayne
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            var effect = Instantiate(rock, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(electricityEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(electricityEffect, wayneSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
 
         //spawn a random effect out the pipe
-        if (Input.GetKeyDown(KeyCode.Home))
+        if (Input.GetKeyDown(KeyCode.F15))
         {
-            var effect = Instantiate(effects[RandomNumber(0, 9)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(effects[RandomNumber(0, 2)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
 
         //toggle instrument animation
@@ -99,7 +101,7 @@ public class NY2023Manager : MonoBehaviour
         {
             endingSequence = true;
             endingScorb.GetComponent<Animator>().SetTrigger("ending");
-            Instantiate(rock, scorbSpawner.transform.position, new Quaternion(0, 100, 0, 0));
+            Instantiate(electricityEffect, scorbSpawner.transform.position, new Quaternion(0, 100, 0, 0));
         }
 
         if (Input.GetKeyDown(KeyCode.KeypadMultiply))
@@ -148,14 +150,15 @@ public class NY2023Manager : MonoBehaviour
         //toggle scorpy teleport 1
         if (Input.GetKeyDown(KeyCode.Keypad2))
         {
-            Instantiate(teleportEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(teleportEffect, scorpySpawner.transform);
             scorpyObj.GetComponent<Animator>().SetBool("Teleport1", true);
+            scorpyObj.GetComponent<Animator>().SetBool("Teleport2", false);
         }
 
         //toggle scorpy idle position
         if (Input.GetKeyDown(KeyCode.Keypad0))
         {
-            Instantiate(teleportEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(teleportEffect, scorpySpawner.transform);
             scorpyObj.GetComponent<Animator>().SetBool("Teleport1", false);
             scorpyObj.GetComponent<Animator>().SetBool("Teleport2", false);
         }
@@ -163,8 +166,21 @@ public class NY2023Manager : MonoBehaviour
         //toggle scorpy teleport 2
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
-            Instantiate(teleportEffect, scorpySpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            Instantiate(teleportEffect, scorpySpawner.transform);
             scorpyObj.GetComponent<Animator>().SetBool("Teleport2", true);
+            scorpyObj.GetComponent<Animator>().SetBool("Teleport1", false);
+        }
+
+        //toggle scorpy animation 1
+        if (Input.GetKeyDown(KeyCode.F13))
+        {
+            scorpyObj.GetComponent<Animator>().SetTrigger("Anim1");
+        }
+
+        //toggle scorpy animation 2
+        if (Input.GetKeyDown(KeyCode.F14))
+        {
+            scorpyObj.GetComponent<Animator>().SetTrigger("Anim2");
         }
 
         //toggle baaulp entrance
@@ -178,6 +194,8 @@ public class NY2023Manager : MonoBehaviour
         {
             baaulpObj.GetComponent<Animator>().SetTrigger("Exit");
             Instantiate(baaulpBed);
+            Destroy(baaulpObj, 10f);
+            Destroy(baaulpBed, 10f);
         }
 
         //toggle wayne entrance
@@ -186,10 +204,22 @@ public class NY2023Manager : MonoBehaviour
             wayneObj.GetComponent<Animator>().SetTrigger("Enter");
         }
 
+        //toggle wayne animation 1
+        if (Input.GetKeyDown(KeyCode.PageDown))
+        {
+            wayneObj.GetComponent<Animator>().SetTrigger("Anim1");
+        }
+
+        //toggle wayne animation 2
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            wayneObj.GetComponent<Animator>().SetTrigger("Anim2");
+        }
+
         //spawn a random gem
         if (Input.GetKeyDown(KeyCode.KeypadPlus))
         {
-            var effect = Instantiate(gems[RandomNumber(0, 3)], pipeSpawner.transform.position, new Quaternion(0, 0, 0, 0));
+            var effect = Instantiate(gems[RandomNumber(0, 3)], gemSpawner.transform.position, new Quaternion(0, 0, 0, 0));
         }
 
         //spawn trophy
