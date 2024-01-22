@@ -14,19 +14,21 @@ public class Director : MonoBehaviour
   [SerializeField] private CinemachineBrain brain;
   [SerializeField] private CinemachineBlendDefinition.Style defaultBlendStyle;
   [SerializeField] private CinemachineBlendDefinition.Style overrideBlendStyle;
+  [SerializeField] private bool enableViewfinder = false;
   private Dictionary<int, GameObject> cameraMen;
   private InputAction cameraSwitchAction;
   private InputAction cutModeAction;
 
   private void Awake()
   {
-    GameObject[] cameraMenList = GameObject.FindGameObjectsWithTag("CameraMan");
-    cameraMen = cameraMenList.Select((v, i) => new { Key = i, Value = v }).ToDictionary(o => o.Key + 1, o =>
-    {
-      Camera directorCamera = o.Value.GetComponentInChildren<Camera>();
-      directorCamera.rect = new Rect(o.Key * 0.333f, 0, 0.333f, 0.333f);
-      return o.Value;
-    });
+
+        GameObject[] cameraMenList = GameObject.FindGameObjectsWithTag("CameraMan");
+        cameraMen = cameraMenList.Select((v, i) => new { Key = i, Value = v }).ToDictionary(o => o.Key + 1, o =>
+        {
+            Camera directorCamera = o.Value.GetComponentInChildren<Camera>();
+            directorCamera.rect = new Rect(o.Key * 0.333f, 0, 0.333f, 0.333f);
+            return o.Value;
+        });
   }
 
   private void OnEnable()
@@ -49,7 +51,11 @@ public class Director : MonoBehaviour
 
   private void Start()
   {
-    Display.displays[1].Activate();
+    if (enableViewfinder)
+    {
+        Display.displays[1].Activate();
+    }
+    
     brain.m_DefaultBlend.m_Style = defaultBlendStyle;
   }
 
